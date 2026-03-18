@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="RecipeDetails" format=3 uid="uid://blml6vpyuha2"]
+
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="1_ypmhm"]
+[ext_resource type="Resource" uid="uid://c4imqy2xni62k" path="res://items/Iron.tres" id="2_d6d2q"]
+[ext_resource type="Resource" uid="uid://bg4axj4e5wkq" path="res://items/Carbon.tres" id="3_74cgv"]
+[ext_resource type="Resource" uid="uid://bqnhyt5cngc56" path="res://items/Cobalt.tres" id="4_adsq3"]
+[ext_resource type="Resource" uid="uid://b7edxgk5jg7gv" path="res://items/Titanium.tres" id="5_74cgv"]
+[ext_resource type="Resource" uid="uid://btb18innj1vj4" path="res://items/Tungsten.tres" id="6_adsq3"]
+[ext_resource type="Script" uid="uid://dpjtnnpa07scv" path="res://scripts/recipe_detail.gd" id="6_wj1ye"]
+[ext_resource type="Resource" uid="uid://d34dt4fg2tu4q" path="res://items/SteelCoTiW.tres" id="7_74cgv"]
+
+[resource]
+script = ExtResource("6_wj1ye")
+result_id = &"steel_cotiw"
+result_item = ExtResource("7_74cgv")
+recipe = Array[ExtResource("1_ypmhm")]([ExtResource("2_d6d2q"), ExtResource("3_74cgv"), ExtResource("4_adsq3"), ExtResource("5_74cgv"), ExtResource("6_adsq3")])
+min_temp = 1300.0
+max_temp = 1950.0
+metadata/_custom_type_script = "uid://dpjtnnpa07scv"

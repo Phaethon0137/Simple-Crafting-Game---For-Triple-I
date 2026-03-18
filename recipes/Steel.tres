@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RecipeDetails" format=3 uid="uid://yx3hmyyj8c5j"]
+
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="1_j7sep"]
+[ext_resource type="Script" uid="uid://dpjtnnpa07scv" path="res://scripts/recipe_detail.gd" id="2_8w6xj"]
+[ext_resource type="Resource" uid="uid://c4imqy2xni62k" path="res://items/Iron.tres" id="2_bicsb"]
+[ext_resource type="Resource" uid="uid://bg4axj4e5wkq" path="res://items/Carbon.tres" id="3_tdvq5"]
+[ext_resource type="Resource" uid="uid://cyys7vpb2s010" path="res://items/Steel.tres" id="4_tdvq5"]
+
+[resource]
+script = ExtResource("2_8w6xj")
+result_id = &"steel"
+result_item = ExtResource("4_tdvq5")
+recipe = Array[ExtResource("1_j7sep")]([ExtResource("2_bicsb"), ExtResource("3_tdvq5")])
+min_temp = 1150.0
+max_temp = 1700.0
+metadata/_custom_type_script = "uid://dpjtnnpa07scv"

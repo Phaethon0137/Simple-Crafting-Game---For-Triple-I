@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="RecipeDetails" format=3 uid="uid://d1y3kojr0mj66"]
+
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="1_etpop"]
+[ext_resource type="Resource" uid="uid://c4imqy2xni62k" path="res://items/Iron.tres" id="2_wn3mj"]
+[ext_resource type="Resource" uid="uid://bg4axj4e5wkq" path="res://items/Carbon.tres" id="3_2gubn"]
+[ext_resource type="Resource" uid="uid://b7edxgk5jg7gv" path="res://items/Titanium.tres" id="4_gvbjr"]
+[ext_resource type="Resource" uid="uid://3v114ixr3kh0" path="res://items/SteelTiCo.tres" id="5_etpop"]
+[ext_resource type="Resource" uid="uid://bqnhyt5cngc56" path="res://items/Cobalt.tres" id="5_wn3mj"]
+[ext_resource type="Script" uid="uid://dpjtnnpa07scv" path="res://scripts/recipe_detail.gd" id="6_2eycr"]
+
+[resource]
+script = ExtResource("6_2eycr")
+result_id = &"steel_tico"
+result_item = ExtResource("5_etpop")
+recipe = Array[ExtResource("1_etpop")]([ExtResource("2_wn3mj"), ExtResource("3_2gubn"), ExtResource("4_gvbjr"), ExtResource("5_wn3mj")])
+min_temp = 1150.0
+max_temp = 1800.0
+metadata/_custom_type_script = "uid://dpjtnnpa07scv"

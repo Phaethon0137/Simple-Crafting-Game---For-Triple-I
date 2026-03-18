@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://3v114ixr3kh0"]
+
+[ext_resource type="Texture2D" uid="uid://dkuv03asowyhc" path="res://sprites/PACK/separate files/iron_ingot.png" id="1_5563y"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_tag47"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="3_wpl2u"]
+
+[sub_resource type="Resource" id="Resource_5563y"]
+script = ExtResource("2_tag47")
+showcase = 3
+mass = 23.199999809265137
+hardness = 6.3999996
+density = 7960.0
+tensile_strength = 1000.0
+compressive_strength = 360.0
+elasticity = 218.0
+toughness = 2500000.0
+brittleness = 0.17999983
+thermal_expansion = 11.5
+fatigue_stength = 500.0
+fracture_toughness = 135.0
+porosity = 0.5999999
+melting_point = 1540.0
+malleability = 100000.0
+electric_conductivity = 1000.0
+yield_strength = 700.0
+creep_resistance = 380.0
+corrosion_resistance = 0.4000001
+hardenability = 52.0
+ductility = 34.0
+weldability = 0.52
+specific_heat_capacity = 525.0
+thermal_conductivity = 40.0
+fire_resistance = 1000.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("3_wpl2u")
+item_id = &"steel_tico"
+item_name = "Titanium-Cobalt Steel"
+item_icon = ExtResource("1_5563y")
+icon_filter = 1
+properties = SubResource("Resource_5563y")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c4imqy2xni62k"]
+
+[ext_resource type="Texture2D" uid="uid://ndnh78ef2x8e" path="res://sprites/iron.png" id="1_5msyk"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="1_8nv62"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_j7cyc"]
+
+[sub_resource type="Resource" id="Resource_lm64g"]
+script = ExtResource("2_j7cyc")
+showcase = 2
+atomic_number = 26
+atomic_mass = 55.84500026702881
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("1_8nv62")
+item_id = &"iron"
+item_name = "Iron (Fe)"
+item_icon = ExtResource("1_5msyk")
+icon_filter = 1
+properties = SubResource("Resource_lm64g")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

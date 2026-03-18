@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cy7pi7h4tx5k5"]
+
+[ext_resource type="Texture2D" uid="uid://dqj73fvoyccxb" path="res://sprites/chromium.png" id="1_speh5"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="2_14omy"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_cqpav"]
+
+[sub_resource type="Resource" id="Resource_1k7qf"]
+script = ExtResource("2_cqpav")
+showcase = 2
+atomic_number = 24
+atomic_mass = 51.99600028991699
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("2_14omy")
+item_id = &"chromium"
+item_name = "Chromium (Cr)"
+item_icon = ExtResource("1_speh5")
+icon_filter = 1
+properties = SubResource("Resource_1k7qf")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

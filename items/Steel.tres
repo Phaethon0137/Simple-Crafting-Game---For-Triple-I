@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cyys7vpb2s010"]
+
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="1_ns5a7"]
+[ext_resource type="Texture2D" uid="uid://dkuv03asowyhc" path="res://sprites/PACK/separate files/iron_ingot.png" id="1_of7g2"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_hf8b6"]
+
+[sub_resource type="Resource" id="Resource_hf8b6"]
+script = ExtResource("2_hf8b6")
+showcase = 3
+mass = 22.1
+hardness = 5.5
+density = 7870.0
+tensile_strength = 750.0
+compressive_strength = 280.0
+elasticity = 210.0
+toughness = 1800000.0
+brittleness = 0.3000002
+thermal_expansion = 12.5
+fatigue_stength = 380.0
+fracture_toughness = 100.0
+porosity = 1.0
+melting_point = 1540.0
+malleability = 90000.0
+electric_conductivity = 1100.0
+yield_strength = 600.0
+creep_resistance = 250.0
+corrosion_resistance = 1.0
+hardenability = 55.0
+ductility = 35.0
+weldability = 0.6500001
+specific_heat_capacity = 520.0
+thermal_conductivity = 54.0
+fire_resistance = 700.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("1_ns5a7")
+item_id = &"steel"
+item_name = "Steel"
+item_icon = ExtResource("1_of7g2")
+icon_filter = 1
+properties = SubResource("Resource_hf8b6")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

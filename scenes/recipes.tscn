@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://2npe01d5xcf"]
+
+[ext_resource type="Script" uid="uid://qjx7aoyxqxx4" path="res://scripts/recipes.gd" id="1_xmpxi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xmpxi"]
+line_spacing = -1.0
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_b7koh"]
+line_spacing = -2.0
+font_size = 12
+
+[node name="Recipes" type="Control" unique_id=1023790638]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xmpxi")
+
+[node name="BG" type="Panel" parent="." unique_id=1837755918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="FlowContainer" parent="." unique_id=1108368844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Steel" type="Panel" parent="Container" unique_id=396633053]
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+
+[node name="Hint" type="Label" parent="Container/Steel" unique_id=2047123098]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hint: Carbonize Iron with Temp range of ~1200-1400°C in the Smelter."
+label_settings = SubResource("LabelSettings_xmpxi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Recipe" type="Panel" parent="Container/Steel" unique_id=434373043]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = -11.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Container/Steel/Recipe" unique_id=1494385832]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Temp Range: 1200-1400°C
+Fe + C: results into a simple Steel Alloy (Fe-C)"
+label_settings = SubResource("LabelSettings_b7koh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CoSteel" type="Panel" parent="Container" unique_id=925520154]
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+
+[node name="Hint" type="Label" parent="Container/CoSteel" unique_id=796450271]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hint: Combine certain metals with Fe + C in the Temp range of ~1200-1400°C in the Smelter."
+label_settings = SubResource("LabelSettings_xmpxi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Recipe" type="Panel" parent="Container/CoSteel" unique_id=1907841010]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = -11.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Container/CoSteel/Recipe" unique_id=590306515]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Temp Range: 1200-1400°C
+Fe + C + Co: results into a Cobalt-Alloyed Steel Alloy (Fe-C-Co)"
+label_settings = SubResource("LabelSettings_b7koh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TiSteel" type="Panel" parent="Container" unique_id=1119233928]
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+
+[node name="Hint" type="Label" parent="Container/TiSteel" unique_id=335743594]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hint: Combine certain metals with Fe + C in the Temp range of ~1200-1400°C in the Smelter."
+label_settings = SubResource("LabelSettings_xmpxi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Recipe" type="Panel" parent="Container/TiSteel" unique_id=1385030024]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = -11.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Container/TiSteel/Recipe" unique_id=1444425648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Temp Range: 1200-1400°C
+Fe + C + Ti: results into a Titanium-Alloyed Steel Alloy (Fe-C-Ti)"
+label_settings = SubResource("LabelSettings_b7koh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

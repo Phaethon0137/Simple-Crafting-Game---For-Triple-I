@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://d34dt4fg2tu4q"]
+
+[ext_resource type="Texture2D" uid="uid://dkuv03asowyhc" path="res://sprites/PACK/separate files/iron_ingot.png" id="1_vo3m0"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_huc77"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="3_4wa22"]
+
+[sub_resource type="Resource" id="Resource_vo3m0"]
+script = ExtResource("2_huc77")
+showcase = 3
+mass = 24.300000190734863
+hardness = 7.3
+density = 8300.0
+tensile_strength = 1150.0
+compressive_strength = 460.0
+elasticity = 238.0
+toughness = 2600000.0
+brittleness = 0.21999979
+thermal_expansion = 10.5
+fatigue_stength = 560.0
+fracture_toughness = 145.0
+porosity = 0.4000001
+melting_point = 1600.0
+malleability = 95000.0
+electric_conductivity = 900.0
+yield_strength = 850.0
+creep_resistance = 500.0
+corrosion_resistance = 0.3499999
+hardenability = 62.0
+ductility = 30.0
+weldability = 0.6500001
+specific_heat_capacity = 515.0
+thermal_conductivity = 38.0
+fire_resistance = 1200.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("3_4wa22")
+item_id = &"steel_cotiw"
+item_name = "Cobalt-Titanium-Tungsten Steel"
+item_icon = ExtResource("1_vo3m0")
+icon_filter = 1
+properties = SubResource("Resource_vo3m0")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

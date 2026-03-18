@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://d3bif86k3ciim"]
+
+[ext_resource type="Texture2D" uid="uid://dkuv03asowyhc" path="res://sprites/PACK/separate files/iron_ingot.png" id="1_hy8t1"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_tkn1k"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="3_kdr1i"]
+
+[sub_resource type="Resource" id="Resource_hy8t1"]
+script = ExtResource("2_tkn1k")
+showcase = 3
+mass = 23.4
+hardness = 6.2
+density = 7980.0
+tensile_strength = 950.0
+compressive_strength = 340.0
+elasticity = 215.0
+toughness = 2300000.0
+brittleness = 0.21999979
+thermal_expansion = 12.8
+fatigue_stength = 480.0
+fracture_toughness = 120.0
+porosity = 0.8000002
+melting_point = 1520.0
+malleability = 95000.0
+electric_conductivity = 1050.0
+yield_strength = 680.0
+creep_resistance = 360.0
+corrosion_resistance = 0.6999998
+hardenability = 50.0
+ductility = 33.0
+weldability = 0.5799999
+specific_heat_capacity = 510.0
+thermal_conductivity = 50.0
+fire_resistance = 950.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("3_kdr1i")
+item_id = &"steel_co"
+item_name = "Cobalt-Alloyed Steel"
+item_icon = ExtResource("1_hy8t1")
+icon_filter = 1
+properties = SubResource("Resource_hy8t1")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

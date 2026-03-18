@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bg4axj4e5wkq"]
+
+[ext_resource type="Texture2D" uid="uid://dsumbi38vl2ol" path="res://sprites/carbon.png" id="1_2xkt2"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="1_csy7x"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_gkewo"]
+
+[sub_resource type="Resource" id="Resource_gkewo"]
+script = ExtResource("2_gkewo")
+showcase = 2
+atomic_number = 6
+atomic_mass = 12.011
+hardness = 8.0
+density = 3515.0
+anistropy = 1.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("1_csy7x")
+item_id = &"carbon"
+item_name = "Carbon (C)"
+item_icon = ExtResource("1_2xkt2")
+icon_filter = 1
+properties = SubResource("Resource_gkewo")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

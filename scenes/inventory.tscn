@@ -1,0 +1,589 @@
+[gd_scene format=3 uid="uid://bbei8df5s4jgp"]
+
+[ext_resource type="Script" uid="uid://dlte8e5noca0l" path="res://scripts/inventory.gd" id="1_hj2ta"]
+[ext_resource type="Texture2D" uid="uid://nkh27gboh0be" path="res://icon.svg" id="2_hj2ta"]
+[ext_resource type="PackedScene" uid="uid://bqfr55pya2cd0" path="res://scenes/inventory_slot.tscn" id="2_ty45s"]
+[ext_resource type="Script" uid="uid://dugo24y6x1t3q" path="res://scripts/smelter.gd" id="3_53g1v"]
+
+[sub_resource type="Animation" id="Animation_yyk2a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BG/Button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, -30.6)]
+}
+
+[sub_resource type="Animation" id="Animation_uae8j"]
+resource_name = "drop"
+length = 0.5
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BG:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 480)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BG/Button:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(4, -30.6), Vector2(4, -241)]
+}
+
+[sub_resource type="Animation" id="Animation_qw0r6"]
+resource_name = "drop_instant"
+length = 0.1
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BG:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 480)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BG/Button:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(4, -30.6), Vector2(4, -241)]
+}
+
+[sub_resource type="Animation" id="Animation_s887n"]
+resource_name = "rise"
+length = 0.5
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BG:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(0, 480), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BG/Button:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(4, -241), Vector2(4, -30.6)]
+}
+
+[sub_resource type="Animation" id="Animation_hj2ta"]
+resource_name = "rise_instant"
+length = 0.1
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BG:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(0, 480), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BG/Button:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(4, -241), Vector2(4, -30.6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g71ie"]
+_data = {
+&"RESET": SubResource("Animation_yyk2a"),
+&"drop": SubResource("Animation_uae8j"),
+&"drop_instant": SubResource("Animation_qw0r6"),
+&"rise": SubResource("Animation_s887n"),
+&"rise_instant": SubResource("Animation_hj2ta")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw0r6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj2ta"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ty45s"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53g1v"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_ty45s"]
+font_size = 94
+
+[sub_resource type="LabelSettings" id="LabelSettings_53g1v"]
+font_size = 14
+
+[node name="Inventory" type="Control" unique_id=2043693821 groups=["Inv"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hj2ta")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1548407396]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_g71ie")
+
+[node name="CursorItemIcon" type="TextureRect" parent="." unique_id=761084348]
+unique_name_in_owner = true
+visible = false
+z_index = 99
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("2_hj2ta")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CursorItemCountLb" type="Label" parent="CursorItemIcon" unique_id=1776644415]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Control" type="Control" parent="." unique_id=805676066]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -270.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BG" type="Panel" parent="Control" unique_id=1996378781]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -0.00036621094
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="Control/BG" unique_id=925662064]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/BG" unique_id=14499611]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = -30.6
+offset_right = 89.0
+offset_bottom = 0.39999962
+theme_override_styles/normal = SubResource("StyleBoxFlat_qw0r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hj2ta")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ty45s")
+theme_override_styles/focus = SubResource("StyleBoxFlat_53g1v")
+text = "^"
+
+[node name="ItemInfo" type="Control" parent="Control" unique_id=2112518848]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -289.0
+offset_top = -378.0
+grow_horizontal = 0
+
+[node name="BG" type="Panel" parent="Control/ItemInfo" unique_id=694514924]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IconBG" type="Panel" parent="Control/ItemInfo" unique_id=1846391606]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 68.0
+offset_bottom = 67.0
+
+[node name="ItemIcon" type="TextureRect" parent="Control/ItemInfo/IconBG" unique_id=1807306363]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hj2ta")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemName" type="Label" parent="Control/ItemInfo" unique_id=1154999728]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.5
+offset_top = 9.0
+offset_right = 141.5
+offset_bottom = 32.0
+grow_horizontal = 2
+text = "item_name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemComp" type="Label" parent="Control/ItemInfo" unique_id=687477355]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.5
+offset_top = 33.0
+offset_right = 129.5
+offset_bottom = 56.0
+grow_horizontal = 2
+text = "FeC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemDetails" type="RichTextLabel" parent="Control/ItemInfo" unique_id=1466759284]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/bold_font_size = 17
+theme_override_font_sizes/bold_italics_font_size = 17
+theme_override_font_sizes/italics_font_size = 17
+theme_override_font_sizes/mono_font_size = 17
+text = "Mass: 0 kg
+Hardness: 0
+Density: 0 kg/m3
+Tensile Strength: 0.0 psi
+Melting Point: 0°C (273.15 K | 32°F)
+Conductivity: 0.0 mS/cm
+Malleability: 0.0
+Elasticity: 0.0
+Toughtness: 0.0
+Plasticity: 0.0
+Brittleness: 0.0"
+
+[node name="Smelter" type="Control" parent="." unique_id=1362116816]
+anchors_preset = 0
+offset_left = 22.0
+offset_top = 12.0
+offset_right = 716.0
+offset_bottom = 328.0
+script = ExtResource("3_53g1v")
+
+[node name="BG" type="Panel" parent="Smelter" unique_id=1774289488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Result" parent="Smelter" unique_id=1990615648 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -45.0
+offset_right = -34.0
+offset_bottom = 19.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Preview" type="TextureRect" parent="Smelter/Result" unique_id=101545557]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Smelter" unique_id=24767065]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -78.0
+offset_right = -112.0
+offset_bottom = 51.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "="
+label_settings = SubResource("LabelSettings_ty45s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IngredientContainer" type="Control" parent="Smelter" unique_id=1181663657]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -390.0
+offset_top = -44.0
+offset_right = 230.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IngredientContainer" type="FlowContainer" parent="Smelter/IngredientContainer" unique_id=441061381]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="ItemA" parent="Smelter/IngredientContainer/IngredientContainer" unique_id=603166185 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ItemB" parent="Smelter/IngredientContainer/IngredientContainer" unique_id=745450836 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ItemC" parent="Smelter/IngredientContainer/IngredientContainer" unique_id=1396181068 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ItemD" parent="Smelter/IngredientContainer/IngredientContainer" unique_id=1020477160 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ItemE" parent="Smelter/IngredientContainer/IngredientContainer" unique_id=484701341 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ItemF" parent="Smelter/IngredientContainer/IngredientContainer" unique_id=1709678176 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ItemG" parent="Smelter/IngredientContainer/IngredientContainer" unique_id=890177816 instance=ExtResource("2_ty45s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SmeltBtn" type="Button" parent="Smelter" unique_id=519793989]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -86.0
+offset_right = -24.0
+offset_bottom = -53.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Smelt"
+
+[node name="TempSlider" type="HSlider" parent="Smelter" unique_id=1479567235]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = -56.0
+offset_right = 279.0
+offset_bottom = -40.0
+grow_vertical = 0
+max_value = 2100.0
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="TempLb" type="Label" parent="Smelter/TempSlider" unique_id=1161920800]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.5
+offset_top = -4.0
+offset_right = 92.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Temperature: 0°C (0 K | 0°F)"
+label_settings = SubResource("LabelSettings_53g1v")
+horizontal_alignment = 1
+
+[node name="TargetTempLb" type="Label" parent="Smelter/TempSlider" unique_id=1688831611]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.5
+offset_top = -14.0
+offset_right = 94.5
+offset_bottom = 9.0
+grow_horizontal = 2
+text = "Target: 0°C (0 K | 0°F)"
+label_settings = SubResource("LabelSettings_53g1v")
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="." unique_id=1373350484]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -272.0
+offset_right = 1149.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Control3" type="Control" parent="." unique_id=147968647]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -324.0
+offset_bottom = 324.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2

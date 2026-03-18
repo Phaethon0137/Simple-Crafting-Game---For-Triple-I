@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://ehdqep4ekvlo"]
+
+[ext_resource type="Texture2D" uid="uid://dkuv03asowyhc" path="res://sprites/PACK/separate files/iron_ingot.png" id="1_g0rwj"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_crhw6"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="3_h2vjd"]
+
+[sub_resource type="Resource" id="Resource_g0rwj"]
+script = ExtResource("2_crhw6")
+showcase = 3
+mass = 23.0
+hardness = 6.0
+density = 7950.0
+tensile_strength = 900.0
+compressive_strength = 320.0
+elasticity = 215.0
+toughness = 2200000.0
+brittleness = 0.19999981
+thermal_expansion = 11.8
+fatigue_stength = 460.0
+fracture_toughness = 130.0
+porosity = 0.5999999
+melting_point = 1560.0
+malleability = 100000.0
+electric_conductivity = 1050.0
+yield_strength = 650.0
+creep_resistance = 340.0
+corrosion_resistance = 0.5
+hardenability = 48.0
+ductility = 32.0
+weldability = 0.5500002
+specific_heat_capacity = 540.0
+thermal_conductivity = 38.0
+fire_resistance = 950.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("3_h2vjd")
+item_id = &"steel_ti"
+item_name = "Titanium-Alloyed Steel"
+item_icon = ExtResource("1_g0rwj")
+icon_filter = 1
+properties = SubResource("Resource_g0rwj")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

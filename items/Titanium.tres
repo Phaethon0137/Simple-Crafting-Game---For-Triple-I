@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b7edxgk5jg7gv"]
+
+[ext_resource type="Texture2D" uid="uid://bpg1ls67twfig" path="res://sprites/titanium.png" id="1_51613"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="2_4wuyr"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_o6n8t"]
+
+[sub_resource type="Resource" id="Resource_cbbg3"]
+script = ExtResource("2_o6n8t")
+showcase = 2
+atomic_number = 22
+atomic_mass = 47.86699962615967
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("2_4wuyr")
+item_id = &"titanium"
+item_name = "Titanium (Ti)"
+item_icon = ExtResource("1_51613")
+icon_filter = 1
+properties = SubResource("Resource_cbbg3")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://d4b34dw6rtpc2"]
+
+[ext_resource type="Texture2D" uid="uid://dkuv03asowyhc" path="res://sprites/PACK/separate files/iron_ingot.png" id="1_4nl4j"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_aojke"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="3_ps6bm"]
+
+[sub_resource type="Resource" id="Resource_4nl4j"]
+script = ExtResource("2_aojke")
+showcase = 3
+mass = 24.5
+hardness = 7.2
+density = 8350.0
+tensile_strength = 1100.0
+compressive_strength = 430.0
+elasticity = 235.0
+toughness = 2000000.0
+brittleness = 0.3000002
+thermal_expansion = 11.0
+fatigue_stength = 540.0
+fracture_toughness = 100.0
+porosity = 0.5
+melting_point = 1590.0
+malleability = 85000.0
+electric_conductivity = 900.0
+yield_strength = 800.0
+creep_resistance = 480.0
+corrosion_resistance = 0.5
+hardenability = 60.0
+ductility = 27.0
+weldability = 0.7199998
+specific_heat_capacity = 480.0
+thermal_conductivity = 52.0
+fire_resistance = 1150.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("3_ps6bm")
+item_id = &"steel_cow"
+item_name = "Cobalt-Tungsten Steel"
+item_icon = ExtResource("1_4nl4j")
+icon_filter = 1
+properties = SubResource("Resource_4nl4j")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

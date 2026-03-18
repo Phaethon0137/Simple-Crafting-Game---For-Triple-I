@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RecipeDetails" format=3 uid="uid://c2h2582jh05tb"]
+
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="1_6e601"]
+[ext_resource type="Resource" uid="uid://c4imqy2xni62k" path="res://items/Iron.tres" id="2_ed134"]
+[ext_resource type="Resource" uid="uid://bg4axj4e5wkq" path="res://items/Carbon.tres" id="3_kw841"]
+[ext_resource type="Resource" uid="uid://bb302uai462ss" path="res://items/StainlessSteel.tres" id="4_6e601"]
+[ext_resource type="Resource" uid="uid://cy7pi7h4tx5k5" path="res://items/Chromium.tres" id="4_ed134"]
+[ext_resource type="Script" uid="uid://dpjtnnpa07scv" path="res://scripts/recipe_detail.gd" id="5_8vjca"]
+
+[resource]
+script = ExtResource("5_8vjca")
+result_id = &"stainless_steel"
+result_item = ExtResource("4_6e601")
+recipe = Array[ExtResource("1_6e601")]([ExtResource("2_ed134"), ExtResource("3_kw841"), ExtResource("4_ed134")])
+min_temp = 1200.0
+max_temp = 1900.0
+metadata/_custom_type_script = "uid://dpjtnnpa07scv"

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bb302uai462ss"]
+
+[ext_resource type="Texture2D" uid="uid://coa6b26dbspyq" path="res://sprites/PACK/separate files/anvil.png" id="1_88qlj"]
+[ext_resource type="Script" uid="uid://cp7264kiqi6sy" path="res://scripts/item.gd" id="2_jcbkk"]
+[ext_resource type="Script" uid="uid://oba1rvfllmek" path="res://scripts/MaterialProperties.gd" id="2_t4mp4"]
+
+[sub_resource type="Resource" id="Resource_xwwjl"]
+script = ExtResource("2_t4mp4")
+showcase = 3
+mass = 23.699999809265137
+hardness = 6.3
+density = 8050.0
+tensile_strength = 827.0
+compressive_strength = 310.0
+elasticity = 200.0
+toughness = 2500000.0
+brittleness = 0.1500001
+thermal_expansion = 17.800000190734863
+fatigue_stength = 430.0
+fracture_toughness = 200.0
+porosity = 0.5
+melting_point = 1530.0
+malleability = 120000.0
+electric_conductivity = 1400.0
+yield_strength = 690.0
+creep_resistance = 310.0
+corrosion_resistance = 0.099999905
+hardenability = 40.0
+ductility = 40.0
+weldability = 0.4499998
+specific_heat_capacity = 530.0
+thermal_conductivity = 25.0
+fire_resistance = 1100.0
+metadata/_custom_type_script = "uid://oba1rvfllmek"
+
+[resource]
+script = ExtResource("2_jcbkk")
+item_id = &"stainless_steel"
+item_name = "Stainless Steel"
+item_icon = ExtResource("1_88qlj")
+icon_filter = 1
+properties = SubResource("Resource_xwwjl")
+metadata/_custom_type_script = "uid://cp7264kiqi6sy"

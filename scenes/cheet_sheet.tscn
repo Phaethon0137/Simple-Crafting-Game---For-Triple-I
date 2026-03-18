@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://dbbnkjly4rdye"]
+
+[ext_resource type="Texture2D" uid="uid://cwn537eqr4m62" path="res://sprites/Screenshot 2026-03-18 075850.png" id="1_y7e0k"]
+[ext_resource type="Texture2D" uid="uid://d0awckknmouux" path="res://sprites/Screenshot 2026-03-18 075905.png" id="2_7jsq4"]
+[ext_resource type="Texture2D" uid="uid://drcv60i3irf55" path="res://sprites/Screenshot 2026-03-18 075916.png" id="3_k7g4k"]
+[ext_resource type="Texture2D" uid="uid://b4ou4pqgjrfwc" path="res://sprites/Screenshot 2026-03-18 075927.png" id="4_72up0"]
+[ext_resource type="Texture2D" uid="uid://c6rqn6ugmfx4c" path="res://sprites/Screenshot 2026-03-18 075937.png" id="5_2xncp"]
+[ext_resource type="Texture2D" uid="uid://ye8iwpvuyp0w" path="res://sprites/Screenshot 2026-03-18 075946.png" id="6_liaa7"]
+[ext_resource type="Texture2D" uid="uid://b1gq4un7g25h2" path="res://sprites/Screenshot 2026-03-18 075959.png" id="7_dymqd"]
+[ext_resource type="Texture2D" uid="uid://d366gog5riepj" path="res://sprites/Screenshot 2026-03-18 080020.png" id="8_66hao"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eika8"]
+bg_color = Color(0, 0, 0, 0.5647059)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="CheetSheet" type="Control" unique_id=949301387]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Recipes" type="RichTextLabel" parent="." unique_id=852842170]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_eika8")
+bbcode_enabled = true
+text = "[center][b]Recipes[/b][/center]
+Temp Range [1200-1400°C]:
+[indent]1. Fe + C = Steel
+2. Fe + C + Ti = Titanium-Alloyed Steel
+3. Fe + C + Co = Cobalt-Alloyed Steel
+4. Fe + C + TiCo = Titanium-Cobalt Steel
+5. Fe + C + CoW = Cobalt-Tungsten Steel
+6. Fe + C + TiW = Titanium-Tungsten Steel
+7. Fe + C + TiCoW = Titanium-Cobalt-Tungsten Steel
+8. Fe + C + W = Tungsten-Alloyed Steel
+[/indent]"
+
+[node name="Details" type="RichTextLabel" parent="." unique_id=1656832383]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 18
+theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/italics_font_size = 18
+theme_override_font_sizes/mono_font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_eika8")
+bbcode_enabled = true
+text = "Mass: The mass of the material based on real world ingot/bar volume. Commonly used measurement unit is kilograms (kg).
+
+Atomic Mass: Total mass of a single atom. Commonly found in Periodic Table of Elements. 
+
+Hardness: A property which determines the material's ability to resist permenant deformation, such as scratches, indentation, or abrasion. The measurement unit used is commonly Mohs scale.
+
+Density: The measure of how much mass is packed into a given volume or space. Calculated by dividing an object's mass by its volume. Commonly used measurement unit is kg/m^3.
+
+Tensile Strength: The maximum amount of tensile (pulling) stress a material can withstand before breaking or failing. Commonly used measurement units are Megapascals (MPa) and Pounds per Square Inch (psi).
+
+Melting Point: The specific temperature at which a material/substance melts or in scientific term changes state from solid to liquid. Measurement units used are Celsius (°C), Farenheit (°F) and Kelvin (K)
+
+Conductivity: The material's ability to allow the flow of electric charge (Electrical Conductivity) or heat (Thermal Conductivity). Used measurement unit is mS/cm
+
+Malleability: The physical property of a material, particularly metals. It is the ability to be shaped, hammered, or rolled into thin sheets without breaking. Used measurement unit is psi.
+
+Ductility: The physical property of a material, particularly metals. It is the ability to deform permenantly under tensile stress—such as being stretch into thin wire or drawn out—without breaking
+
+Elasticity: The material's ability to return to its original shape and size after deforming forces are removed. Used measurement unit is Gigapascals (GPa).
+
+Toughness: The material's ability to absorb energy and plastically deform without fracturing, combining high strength and ductility. Used measurement unit is (J/m^3).
+
+Brittleness: The tendency of the material to break, snap, or crack without significant deformation (bending or stretching) when subjected to stress."
+
+[node name="VScrollBar" type="VScrollBar" parent="." unique_id=971389175]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=583900190]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=662062400]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=219781377]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("1_y7e0k")
+
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=816431982]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("2_7jsq4")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=420107147]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("3_k7g4k")
+
+[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1737451406]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("4_72up0")
+
+[node name="TextureRect5" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1964974418]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("5_2xncp")
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=2028519145]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("6_liaa7")
+
+[node name="TextureRect7" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1225099840]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("7_dymqd")
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1017563473]
+custom_minimum_size = Vector2(643, 241)
+layout_mode = 2
+texture = ExtResource("8_66hao")
